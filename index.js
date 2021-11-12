@@ -3,6 +3,8 @@ import cors from 'cors';
 import publicIp from 'public-ip';
 
 const app = express();
+const PORT = process.env.PORT || 3000;
+const HOST = '0.0.0.0'
 
 app.use(cors());
 app.use(cors({optionsSuccessStatus: 200})); 
@@ -27,6 +29,6 @@ app.get('/api/whoami', async (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server running on port 3000');
+app.listen(PORT, HOST, () => {
+    console.log(`Server running on port ${PORT}`);
 });
