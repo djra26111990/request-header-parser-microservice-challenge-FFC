@@ -10,6 +10,10 @@
     "microservice",
     "challenge"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djra26111990/request-header-parser-microservice-challenge-FFC"
+  },
   "author": "Daniel Rivas",
   "scripts": {
     "start": "node index.js"
