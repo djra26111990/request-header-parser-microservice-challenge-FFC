@@ -20,11 +20,7 @@ app.get('/', (req, res) => {
 
 app.get('/api/whoami', async (req, res) => {
 
-    const ip = await publicIp.v6().then(ip => ip).catch(err => err);
-
-    if (!ip) {
-        ip = await publicIp.v4().then(ip => ip).catch(err => err);
-    }
+    const ip = await publicIp.v4().then(ip => ip).catch(err => err);
 
     console.log(ip);
 
